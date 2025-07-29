@@ -46,7 +46,6 @@ int main(int argc, char** argv) {
   auto leftCamPtr = pipeline.create<dai::node::Camera>()->build(LEFT_SOCKET);
   auto rightCamPtr = pipeline.create<dai::node::Camera>()->build(RIGHT_SOCKET);
 
-  // We start to have some issues processing output above this size
   uint32_t width = result["width"].as<uint32_t>();
   uint32_t height = result["height"].as<uint32_t>();
   const std::pair<uint32_t, uint32_t> outputSize = std::make_pair(width, height);
